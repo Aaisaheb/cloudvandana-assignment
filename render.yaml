@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: cloudvandana-salesforce-crud
+    env: node
+    plan: free
+    rootDir: .
+    buildCommand: |
+      cd client && npm install && npm run build && cd ../server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: SESSION_SECRET
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: SF_LOGIN_URL
+        value: https://login.salesforce.com
+      - key: SF_CLIENT_ID
+        sync: false
+      - key: SF_CLIENT_SECRET
+        sync: false
+      - key: SF_REDIRECT_URI
+        sync: false
+      - key: SF_API_VERSION
+        value: v61.0
