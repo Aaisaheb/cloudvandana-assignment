@@ -1,43 +1,70 @@
 # CloudVandana Assignment #1 — Associate Software Engineer
 
-A full-stack web app that performs CRUD (Create, Read, Update, Delete) on Salesforce
-standard objects — **Account, Opportunity, Lead, Contact, Case** — selected via a
-dropdown, authenticated through Salesforce OAuth 2.0. Built with **React (Vite)** on
-the frontend and **Node.js / Express** on the backend.
+A full-stack web application that performs CRUD (Create, Read, Update, Delete)
+operations on Salesforce standard objects:
 
-```
-cloudvandana-assignment/
-├── server/     Node.js/Express backend — OAuth2 + Salesforce REST API proxy
-└── client/     React frontend — login, object picker, CRUD UI, infinite scroll
-```
+- Account
+- Opportunity
+- Lead
+- Contact
+- Case
+
+Users authenticate securely through **Salesforce OAuth 2.0** and can select a
+Salesforce object from the application to perform CRUD operations.
+
+The application is built using:
+
+- **Frontend:** React + Vite
+- **Backend:** Node.js + Express
+- **Authentication:** Salesforce OAuth 2.0
+- **API Integration:** Salesforce REST API
+- **Deployment:** Render
 
 ---
 
-## Running the Application
+## Live Application
 
-### Backend
+**Live Demo:**
 
-cd server
-npm install
-npm start
+https://cloudvandana-salesforce-crud-8tgb.onrender.com
 
-Backend:
-http://localhost:5000
+Users can open the live application and authenticate using Salesforce.
 
-### Frontend
+---
 
-cd client
-npm install
-npm run dev
+## GitHub Repository
 
-Frontend:
-http://localhost:5173
+https://github.com/Aaisaheb/cloudvandana-assignment.git
 
+---
 
-## Authentication Flow
+## Features
 
-The application uses Salesforce OAuth 2.0. Users authenticate through Salesforce and are redirected back to the application after successful authentication.
+- Salesforce OAuth 2.0 authentication
+- Secure session-based authentication
+- Salesforce REST API integration
+- CRUD operations for Salesforce standard objects
+- Dynamic object selection using dropdown
+- Account management
+- Opportunity management
+- Lead management
+- Contact management
+- Case management
+- Infinite scrolling / record loading
+- React-based user interface
+- Express backend API layer
+- Production deployment on Render
 
-## API Integration
+---
 
-The backend acts as a server-side API layer between the React frontend and Salesforce REST API. It handles authentication and Salesforce API requests for the supported objects.
+## Supported Salesforce Objects
+
+| Object | Operations |
+|---|---|
+| Account | Create, Read, Update, Delete |
+| Opportunity | Create, Read, Update, Delete |
+| Lead | Create, Read, Update, Delete |
+| Contact | Create, Read, Update, Delete |
+| Case | Create, Read, Update, Delete |
+
+---
